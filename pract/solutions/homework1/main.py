@@ -1,5 +1,6 @@
 # pws la cd cat
 from ast import Try
+from re import T
 import zipfile
 import os
 import sys
@@ -26,29 +27,43 @@ def deflatten(names):
             deflattened.append(name)
         names.remove(name)
     return deflattened
+
+
+def ls1(deflattened, path):
+    for name in deflattened:
+        print(name[0])
+        print(path)
+        if name[0][:-1:] == path:
+            print(name[0])
+            ls1(name[1], path)
     
 
 #parse deflattened list of names to find specific file
-def ls(names, file1):
+def ls(names, file1, recurse=False):
     result = []
-    print(file1)
 
     if file1 == "":
         for name in names:
             print(name[0])
     else:
-        file1+= '/'
+        path = file1.split('/')
+        cnt_path = 0
+
         for name in names:
-            # print(name[0])
-            if name[0] == file1:
-                result = name[1]
-                break
-            elif name[0] != file1:
-                result = ls(name[1], file1)
-                if result != []:
-                    break
-        for name in names:
-            print(name[0])
+            if name[0][:-1:] == path[cnt_path]:
+                if cnt_path == len(path)-1:
+                    result.append(name)
+                else:
+                    cnt_path += 1
+                    ls(name[1], '/'.join(path[cnt_path:]), True)
+    
+    for name in result:
+        for i in name[1]:
+            if type(i)==tuple:
+                print(i[0])
+            else:
+                print(i)
+    
     return result
 
 
@@ -58,10 +73,11 @@ def vshell(zip_file):
         zip_file = zipfile.ZipFile(zip_file)
         deflattened = deflatten(zip_file.namelist())
         # emulate shell inside of zip file
+        curdir = ""
         while True:
-            curdir = ""
+
             path = zipfile.Path(zip_file, curdir)
-            command = input("vs > ")
+            command = input("vs /"+ curdir +" > ")
             if command == "exit":
                 break
             elif command == "":
@@ -70,28 +86,28 @@ def vshell(zip_file):
                 if curdir == "":
                     print("/")
                 else:
-                    print(curdir)
+                    print("/" + curdir)
             elif command.split()[0] == "cd":
                 if command.split()[1] == "..":
-                    if os.curdir == "/":
+                    if curdir == "/":
                         continue
                     else:
-                        zip_file.open(path.parent)
+                        temp = curdir.split('/')
+                        curdir = curdir[:-len(temp[-1])-1]
                 else:
                     if curdir == "":
                         curdir = command.split()[1]
                     else:
                         curdir += '/' + command.split()[1]
-                    zip_file.open(curdir)
-            elif command == "cat":
-                file_name = input("Enter file name: ")
-                try:
-                    print(zip_file.read(file_name))
-                except KeyError:
-                    print("File not found")
+                    
+            elif command.split()[0] == 'cat':
+                for i in list(zip_file.open(curdir + '/' + command.split()[1], mode="r").read()):
+                    print(chr(i), end='')
+                print()
+                
             elif command == "ls":
-                print(deflattened)
-                ls(deflattened, 'bin')
+                # print(deflattened)
+                ls(deflattened, curdir)
             else:
                 print("Invalid command")
     except FileNotFoundError:
