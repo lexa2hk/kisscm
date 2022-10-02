@@ -95,9 +95,6 @@ def main(args):
     (graph,) = pydot.graph_from_dot_file('test-output/round-table.gv')
     graph.write_png('test-output/round-table.png')
     
-    
-    
-    
 
 if __name__ == "__main__":
     main(read_args())

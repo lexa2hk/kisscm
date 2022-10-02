@@ -1,0 +1,13 @@
+// mpl: Requires: contourpy, cycler, fonttools, kiwisolver, numpy, packaging, pillow, pyparsing, python-dateutil
+
+digraph {
+    matplotlib -> contourpy;
+    matplotlib -> cycler;
+    matplotlib -> fonttools;
+    matplotlib -> kiwisolver;
+    matplotlib -> numpy;
+    matplotlib -> packaging;
+    matplotlib -> pillow;
+    matplotlib -> pyparsing;
+    matplotlib -> "python-dateutil";
+}

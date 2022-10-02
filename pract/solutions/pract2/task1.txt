@@ -1,0 +1,21 @@
+PS C:\Users\lexa2k\Desktop\RTU_SEM2\kisscm> pip3 show matplotlib
+
+Результат: 
+
+Name: matplotlib - имя пакета
+Version: 3.6.0 - установленная версия пакета
+Summary: Python plotting package    - общее предназначение пакета
+Home-page: https://matplotlib.org   - веб страница пакета
+Author: John D. Hunter, Michael Droettboom  - авторы
+Author-email: matplotlib-users@python.org  - связь с авторами
+License: PSF - лицензя, на основании которой распространяется (самая известная - MIT)
+Location: c:\users\lexa2k\appdata\local\programs\python\python310\lib\site-packages - расположение пакета
+Requires: contourpy, cycler, fonttools, kiwisolver, numpy, packaging, pillow, pyparsing, python-dateutil   - зависимости (не полное древо)
+Required-by:  - какие пакеты нуждаются в matplotlib
+
+установка из репозитория:
+git clone https://github.com/matplotlib/matplotlib.git
+cd matplotlib
+python -m pip install -e .
+
+python -m pip install -r requirements/dev/dev-requirements.txt

@@ -1,0 +1,29 @@
+PS C:\Users\lexa2k\Desktop\RTU_SEM2\kisscm> npm show express
+
+express@4.18.1 | MIT | deps: 31 | versions: 269 - название, версия, лицензия, количество версий
+Fast, unopinionated, minimalist web framework - описание
+http://expressjs.com/  - сайт пакета
+
+keywords: express, framework, sinatra, web, http, rest, restful, router, app, api  -ключевые слова о пакете
+
+dist
+.tarball: https://registry.npmjs.org/express/-/express-4.18.1.tgz  - архив с пакетом
+.shasum: 7797de8b9c72c857b9cd0e14a5eea80666267caf - sha сумма файла
+.integrity: sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==  - хэш файла
+.unpackedSize: 213.6 kB  - размер пакета
+
+dependencies:  - зависимости
+accepts: ~1.3.8            content-disposition: 0.5.4 cookie: 0.5.0              encodeurl: ~1.0.2          finalhandler: 1.2.0        merge-descriptors: 1.0.1   parseurl: ~1.3.3           qs: 6.10.3
+array-flatten: 1.1.1       content-type: ~1.0.4       debug: 2.6.9               escape-html: ~1.0.3        fresh: 0.5.2               methods: ~1.1.2            path-to-regexp: 0.1.7      range-parser: ~1.2.1       
+body-parser: 1.20.0        cookie-signature: 1.0.6    depd: 2.0.0                etag: ~1.8.1               http-errors: 2.0.0         on-finished: 2.4.1         proxy-addr: ~2.0.7         safe-buffer: 5.2.1
+(...and 7 more.)
+
+maintainers:  - авторы и их почты
+- mikeal <mikeal.rogers@gmail.com>
+- dougwilson <doug@somethingdoug.com>
+- jasnell <jasnell@gmail.com>
+
+dist-tags:  - теги версий
+latest: 4.18.1      next: 5.0.0-beta.1  
+
+published 5 months ago by dougwilson <doug@somethingdoug.com> - дата публикации версии
