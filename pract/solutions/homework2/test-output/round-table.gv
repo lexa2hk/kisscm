@@ -1,0 +1,108 @@
+// Dependencies of python-telegram-bot
+digraph {
+	"python-telegram-bot" [label="python-telegram-bot"]
+	certifi [label=certifi]
+	"python-telegram-bot" -> certifi
+	tornado [label=tornado]
+	"python-telegram-bot" -> tornado
+	APScheduler [label=APScheduler]
+	"python-telegram-bot" -> APScheduler
+	setuptools [label=setuptools]
+	APScheduler -> setuptools
+	six [label=six]
+	APScheduler -> six
+	pytz [label=pytz]
+	APScheduler -> pytz
+	tzlocal [label=tzlocal]
+	APScheduler -> tzlocal
+	funcsigs [label=funcsigs]
+	APScheduler -> funcsigs
+	futures [label=futures]
+	APScheduler -> futures
+	trollius [label=trollius]
+	APScheduler -> trollius
+	sphinx [label=sphinx]
+	APScheduler -> sphinx
+	"sphinx-rtd-theme" [label="sphinx-rtd-theme"]
+	APScheduler -> "sphinx-rtd-theme"
+	gevent [label=gevent]
+	APScheduler -> gevent
+	pymongo [label=pymongo]
+	APScheduler -> pymongo
+	redis [label=redis]
+	APScheduler -> redis
+	rethinkdb [label=rethinkdb]
+	APScheduler -> rethinkdb
+	sqlalchemy [label=sqlalchemy]
+	APScheduler -> sqlalchemy
+	pytest [label=pytest]
+	APScheduler -> pytest
+	"pytest-cov" [label="pytest-cov"]
+	APScheduler -> "pytest-cov"
+	"pytest-tornado5" [label="pytest-tornado5"]
+	APScheduler -> "pytest-tornado5"
+	mock [label=mock]
+	APScheduler -> mock
+	"pytest-asyncio" [label="pytest-asyncio"]
+	APScheduler -> "pytest-asyncio"
+	"pytest-asyncio" [label="pytest-asyncio"]
+	APScheduler -> "pytest-asyncio"
+	tornado [label=tornado]
+	APScheduler -> tornado
+	twisted [label=twisted]
+	APScheduler -> twisted
+	kazoo [label=kazoo]
+	APScheduler -> kazoo
+	pytz [label=pytz]
+	"python-telegram-bot" -> pytz
+	cachetools [label=cachetools]
+	"python-telegram-bot" -> cachetools
+	ujson [label=ujson]
+	"python-telegram-bot" -> ujson
+	cryptography [label=cryptography]
+	"python-telegram-bot" -> cryptography
+	cffi [label=cffi]
+	cryptography -> cffi
+	sphinx [label=sphinx]
+	cryptography -> sphinx
+	"sphinx-rtd-theme" [label="sphinx-rtd-theme"]
+	cryptography -> "sphinx-rtd-theme"
+	pyenchant [label=pyenchant]
+	cryptography -> pyenchant
+	twine [label=twine]
+	cryptography -> twine
+	"sphinxcontrib-spelling" [label="sphinxcontrib-spelling"]
+	cryptography -> "sphinxcontrib-spelling"
+	black [label=black]
+	cryptography -> black
+	flake8 [label=flake8]
+	cryptography -> flake8
+	"flake8-import-order" [label="flake8-import-order"]
+	cryptography -> "flake8-import-order"
+	"pep8-naming" [label="pep8-naming"]
+	cryptography -> "pep8-naming"
+	"setuptools-rust" [label="setuptools-rust"]
+	cryptography -> "setuptools-rust"
+	bcrypt [label=bcrypt]
+	cryptography -> bcrypt
+	pytest [label=pytest]
+	cryptography -> pytest
+	"pytest-benchmark" [label="pytest-benchmark"]
+	cryptography -> "pytest-benchmark"
+	"pytest-cov" [label="pytest-cov"]
+	cryptography -> "pytest-cov"
+	"pytest-subtests" [label="pytest-subtests"]
+	cryptography -> "pytest-subtests"
+	"pytest-xdist" [label="pytest-xdist"]
+	cryptography -> "pytest-xdist"
+	pretend [label=pretend]
+	cryptography -> pretend
+	iso8601 [label=iso8601]
+	cryptography -> iso8601
+	pytz [label=pytz]
+	cryptography -> pytz
+	hypothesis [label=hypothesis]
+	cryptography -> hypothesis
+	PySocks [label=PySocks]
+	"python-telegram-bot" -> PySocks
+}
