@@ -1,0 +1,22 @@
+// Dependencies of matplotlib
+digraph {
+	matplotlib [label=matplotlib]
+	contourpy [label=contourpy]
+	matplotlib -> contourpy
+	cycler [label=cycler]
+	matplotlib -> cycler
+	fonttools [label=fonttools]
+	matplotlib -> fonttools
+	kiwisolver [label=kiwisolver]
+	matplotlib -> kiwisolver
+	numpy [label=numpy]
+	matplotlib -> numpy
+	packaging [label=packaging]
+	matplotlib -> packaging
+	pillow [label=pillow]
+	matplotlib -> pillow
+	pyparsing [label=pyparsing]
+	matplotlib -> pyparsing
+	"python-dateuti" [label="python-dateuti"]
+	matplotlib -> "python-dateuti"
+}

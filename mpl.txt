@@ -1,0 +1,10 @@
+Name: matplotlib
+Version: 3.6.0
+Summary: Python plotting package
+Home-page: https://matplotlib.org
+Author: John D. Hunter, Michael Droettboom
+Author-email: matplotlib-users@python.org
+License: PSF
+Location: c:\users\lexa2k\appdata\local\programs\python\python310\lib\site-packages
+Requires: contourpy, cycler, fonttools, kiwisolver, numpy, packaging, pillow, pyparsing, python-dateutil
+Required-by: 

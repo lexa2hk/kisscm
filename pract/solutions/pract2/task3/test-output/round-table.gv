@@ -1,0 +1,4 @@
+// Dependencies of matplotlib
+digraph {
+	matplotlib [label=matplotlib]
+}
